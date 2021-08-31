@@ -1,0 +1,44 @@
+.home-wrapper {
+  padding-top: 50px;
+  min-height: @min-body-height;
+  .home-body {
+    width: 1200px;
+    margin: 0 auto 20px;
+    display: flex;
+  }
+}
+.side-wrapper {
+  flex: 1;
+  margin-left: 24px;
+}
+
+.side-title {
+  padding: 0 10px;
+  line-height: 50px;
+  height: 50px;
+  font-size: 18px;
+  border-bottom: 1px solid #e5e5e5;
+  color: @mainColor;
+  font-weight: bold;
+  position: relative;
+  display: flex;
+  align-items: center;
+  svg {
+    margin-right: 6px;
+  }
+  &::after {
+    content: " ";
+    position: absolute;
+    height: 2px;
+    width: 10%;
+    left: 0;
+    bottom: -1px;
+    background: @mainColor;
+    transition: 2s ease all;
+  }
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+/*
+列表表格里 固定宽度 栏
+ */
+const TABLE_FIX_WIDTH_PHONE = 'phone'; // 手机号
+const TABLE_FIX_WIDTH_USERNAME = 'username'; // 名字
+const TABLE_FIX_WIDTH_ID_CARD = 'idCard'; // 身份证
+const TABLE_FIX_WIDTH_BANK_CARD = 'bankCard'; // 银行卡号码
+const TABLE_FIX_WIDTH_LABEL = 'label'; // 标签
+const TABLE_FIX_WIDTH_TIME = 'datetime'; // 时间
+const TABLE_FIX_WIDTH_DATE = 'date'; // 日期
+
+const tableFixWidths = {
+  [TABLE_FIX_WIDTH_PHONE]: 120,
+  [TABLE_FIX_WIDTH_USERNAME]: 88,
+  [TABLE_FIX_WIDTH_LABEL]: 88,
+  [TABLE_FIX_WIDTH_TIME]: 168,
+  [TABLE_FIX_WIDTH_DATE]: 120,
+  [TABLE_FIX_WIDTH_ID_CARD]: 180,
+  [TABLE_FIX_WIDTH_BANK_CARD]: 190,
+};
+
+export {
+  TABLE_FIX_WIDTH_PHONE,
+  TABLE_FIX_WIDTH_USERNAME,
+  TABLE_FIX_WIDTH_LABEL,
+  TABLE_FIX_WIDTH_TIME,
+  TABLE_FIX_WIDTH_DATE,
+  TABLE_FIX_WIDTH_ID_CARD,
+  TABLE_FIX_WIDTH_BANK_CARD,
+  tableFixWidths,
+};
