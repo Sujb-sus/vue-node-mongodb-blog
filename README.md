@@ -1,6 +1,6 @@
-# WallBlog
+# wallBlog
 
-简约功能的个人博客
+一款简约的个人博客系统
 
 ## 主要功能
 
@@ -76,4 +76,4 @@
 
 > [vue-node-blog 开源项目：https://github.com/cd-dongzi/vue-node-blog](https://github.com/cd-dongzi/vue-node-blog)
 
-> [WallBlog 线上地址：www.rasblog.com](www.rasblog.com)
+> [WallBlog 线上地址：www.rasblog.com](http://www.rasblog.com)
