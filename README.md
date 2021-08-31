@@ -2,6 +2,8 @@
 
 一款简约的个人博客系统
 
+wallBlog 线上地址：[http://www.rasblog.com](http://www.rasblog.com)
+
 ## 主要功能
 
 ### 客户端
@@ -22,7 +24,7 @@
 
 ## 项目结构
 
-![alt 属性文本]('./static/project-structure.png')
+![项目结构](./static/project-structure.png)
 
 ## 技术应用
 
@@ -76,4 +78,3 @@
 
 > [vue-node-blog 开源项目：https://github.com/cd-dongzi/vue-node-blog](https://github.com/cd-dongzi/vue-node-blog)
 
-> [wallBlog 线上地址：http://www.rasblog.com](http://www.rasblog.com)
