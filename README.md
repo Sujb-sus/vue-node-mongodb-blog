@@ -74,7 +74,7 @@ wallBlog 线上地址：[http://www.rasblog.com](http://www.rasblog.com)
 - npm run analyz // 查看打包信息
 - npm run server // 启动后台接口服务
 
-**参考目录**
+## 参考目录
 
-> [vue-node-blog 开源项目：https://github.com/cd-dongzi/vue-node-blog](https://github.com/cd-dongzi/vue-node-blog)
+- [vue-node-blog 开源项目：https://github.com/cd-dongzi/vue-node-blog](https://github.com/cd-dongzi/vue-node-blog)
 
