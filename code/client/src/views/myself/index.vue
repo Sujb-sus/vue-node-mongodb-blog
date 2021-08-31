@@ -23,6 +23,12 @@
           + 本博客已开源，源码已上传到
           GitHub。如果觉得该博客对你学习有帮助的，请能给博主点个 Star。
           如果有不清楚的地方，欢迎邮箱来信交流。感谢各位国家栋梁的支持！！！🙏🙏🙏
+          <br />
+          + Github地址：<a
+            href="https://github.com/Sujb-sus/wallBlog"
+            target="_blank"
+            >https://github.com/Sujb-sus/wallBlog</a
+          >
         </div>
       </div>
       <div class="side-main">
@@ -60,9 +66,9 @@ export default {
     return {};
   },
   watch: {},
-  created() { },
-  mounted() { },
-  beforeDestroy() { },
+  created() {},
+  mounted() {},
+  beforeDestroy() {},
   methods: {},
 };
 </script>
@@ -105,6 +111,10 @@ export default {
     line-height: 32px;
     margin: 20px auto;
     color: #0609308a;
+    a {
+      color: #0609308a;
+      text-decoration: underline;
+    }
   }
 }
 .side-main {

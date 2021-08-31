@@ -1,6 +1,6 @@
 # wallBlog
 
-一款简约的个人博客系统（全栈）
+一款简约的个人博客系统（前后端分离）
 
 wallBlog 项目线上预览地址：[http://www.rasblog.com](http://www.rasblog.com)
 
