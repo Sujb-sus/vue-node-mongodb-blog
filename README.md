@@ -76,5 +76,5 @@ wallBlog 线上地址：[http://www.rasblog.com](http://www.rasblog.com)
 
 ## 参考目录
 
-- [vue-node-blog 开源项目：https://github.com/cd-dongzi/vue-node-blog](https://github.com/cd-dongzi/vue-node-blog)
+- vue-node-blog 开源项目：[https://github.com/cd-dongzi/vue-node-blog](https://github.com/cd-dongzi/vue-node-blog)
 
