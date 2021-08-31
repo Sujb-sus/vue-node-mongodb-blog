@@ -2,7 +2,7 @@
 
 一款简约的个人博客系统
 
-wallBlog 线上地址：[http://www.rasblog.com](http://www.rasblog.com)
+wallBlog 项目线上预览地址：[http://www.rasblog.com](http://www.rasblog.com)
 
 ## 主要功能
 
