@@ -13,8 +13,8 @@
   "scripts": {
     "dev:admin": "cross-env NODE_ENV_TYPE=admin webpack-dev-server --config build/webpack.dev.conf.js",
     "dev:client": "cross-env NODE_ENV_TYPE=client webpack-dev-server --config build/webpack.dev.conf.js",
-    "build:admin": "cross-env NODE_ENV_TYPE=admin node build/build.js",
-    "build:client": "cross-env NODE_ENV_TYPE=client node build/build.js",
+    "build:admin": "cross-env NODE_ENV_TYPE=admin NODE_ENV=prod node build/build.js",
+    "build:client": "cross-env NODE_ENV_TYPE=client NODE_ENV=prod node build/build.js",
     "analyz:admin": "cross-env analyz_npm_config_report=true npm run build:admin",
     "analyz:client": "cross-env analyz_npm_config_report=true npm run build:client",
     "server": "cross-env NODE_ENV=development nodemon code/server/index.js",
@@ -52,6 +52,7 @@
     "terser-webpack-plugin": "^5.1.4",
     "url-loader": "^0.6.2",
     "vue-loader": "^15.7.0",
+    "vue-style-loader": "^4.1.3",
     "vue-template-compiler": "^2.5.13",
     "webpack": "^5.51.1",
     "webpack-bundle-analyzer": "^4.4.2",

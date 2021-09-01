@@ -5,6 +5,7 @@ const VueLoaderPlugin = require("vue-loader/lib/plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const isAdmin = process.env.NODE_ENV_TYPE === "admin";
+const isProd = process.env.NODE_ENV === "prod";
 const prodConf = isAdmin
   ? require("./config").admin.build
   : require("./config").client.build;
@@ -80,12 +81,21 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, { loader: "css-loader" }],
+        use: [
+          !isProd
+            ? { loader: "vue-style-loader" }
+            : MiniCssExtractPlugin.loader,
+          { loader: "css-loader" },
+        ],
       },
+      // 开发环境使用vue-style-loader可以重载样式模块
       {
         test: /\.less$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          !isProd
+            ? { loader: "vue-style-loader" }
+            : MiniCssExtractPlugin.loader,
+          { loader: "vue-style-loader" },
           { loader: "css-loader" },
           { loader: "less-loader" },
           {
