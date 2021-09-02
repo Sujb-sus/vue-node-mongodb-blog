@@ -1,4 +1,4 @@
-# wallBlog
+# vue-node-mongodb-blog
 
 一款简约的个人博客系统（前后端分离）
 
