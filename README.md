@@ -2,7 +2,8 @@
 
 一款简约的个人博客系统（前后端分离）
 
-wallBlog 项目线上预览地址：[http://www.rasblog.com](http://www.rasblog.com)
+1. wallBlog 项目线上预览地址：[http://www.rasblog.com](http://www.rasblog.com)
+2. wallBlog 码云地址：[https://gitee.com/Sujb/wall-blog](https://gitee.com/Sujb/wall-blog)
 
 ## 主要功能
 
