@@ -1,9 +1,9 @@
-import blogModel from "../../models/blog";
+import blogModel from '../../models/blog';
 
 module.exports = {
   async list(ctx, next) {
     console.log(
-      "----------------获取博客列表 client_api/blog/list-----------------------"
+      '----------------获取博客列表 client_api/blog/list-----------------------'
     );
     let {
       keyword = null,
@@ -11,23 +11,36 @@ module.exports = {
       pageindex = 1,
       pagesize = 9,
       sortBy = null,
+      isMobile = false,
+      type = null,
     } = ctx.request.query;
 
     // 条件参数
     let conditions = { isVisible: true };
-    if (keyword) {
-      let reg = new RegExp(keyword, "i");
-      // 区分搜索框、标签场景
-      let searchObj = isQuery
-        ? [{ title: { $regex: reg } }, { desc: { $regex: reg } }]
-        : [{ type: { $regex: reg } }];
-      conditions["$or"] = [...searchObj];
+    // 用isMobile来区分移动端和pc端
+    let reg = new RegExp(keyword, 'i');
+    if (isMobile) {
+      if (type) {
+        conditions.type = type;
+      }
+      if (keyword) {
+        let searchObj = [{ title: { $regex: reg } }, { desc: { $regex: reg } }];
+        conditions['$or'] = [...searchObj];
+      }
+    } else {
+      if (keyword) {
+        // 区分搜索框、标签场景
+        let searchObj = isQuery
+          ? [{ title: { $regex: reg } }, { desc: { $regex: reg } }]
+          : [{ type: { $regex: reg } }];
+        conditions['$or'] = [...searchObj];
+      }
     }
     // 排序参数
     let sortParams = {};
     if (sortBy) {
       sortParams[sortBy] = -1;
-      sortParams["releaseTime"] = -1;
+      sortParams['releaseTime'] = -1;
     }
 
     let options = {
@@ -47,7 +60,7 @@ module.exports = {
 
   async info(ctx, next) {
     console.log(
-      "----------------获取博客信息 client_api/blog/info-----------------------"
+      '----------------获取博客信息 client_api/blog/info-----------------------'
     );
     let _id = ctx.request.query._id;
     try {
@@ -60,7 +73,7 @@ module.exports = {
 
   async updateLikes(ctx, next) {
     console.log(
-      "----------------点赞文章 client_api/blog/updateLikes------------------"
+      '----------------点赞文章 client_api/blog/updateLikes------------------'
     );
     let paramsData = ctx.request.body;
     let num = JSON.parse(paramsData.isLike) ? -1 : 1;
@@ -75,7 +88,7 @@ module.exports = {
 
   async updatePV(ctx, next) {
     console.log(
-      "----------------文章浏览量 client_api/blog/updatePV------------------"
+      '----------------文章浏览量 client_api/blog/updatePV------------------'
     );
     let paramsData = ctx.request.body;
     let options = { $inc: { pv: 1 } };
