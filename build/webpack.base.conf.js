@@ -95,7 +95,6 @@ module.exports = {
           !isProd
             ? { loader: "vue-style-loader" }
             : MiniCssExtractPlugin.loader,
-          { loader: "vue-style-loader" },
           { loader: "css-loader" },
           { loader: "less-loader" },
           {
