@@ -102,7 +102,7 @@ export default {
         .catch((err) => {
           console.log(err);
         })
-        .finally(() => {});
+        .finally(() => { });
     },
     insertCode() {
       let val = `
@@ -156,15 +156,14 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@import "./markdown.less";
-@import "../../../../../node_modules/highlight.js/styles/tomorrow-night-eighties.css";
+@import './markdown.less';
+@import '../../../../../node_modules/highlight.js/styles/tomorrow-night-eighties.css';
 @md-bd-color: #dcdfe6;
-@md-title-color: rgb(233, 234, 237);
-@md-bg-color: #fff;
+@md-bg-color: #f5f5f5;
 @btn-hover: #3b7cff;
 #markdowm {
   width: 100%;
-  height: 500px;
+  height: 650px;
   text-align: left;
   overflow: hidden;
   border: 1px solid @md-bd-color;
@@ -172,8 +171,8 @@ export default {
   .md-title {
     width: 100%;
     height: 40px;
-    border-bottom: 1px solid #dcdfe6;
-    background: @md-title-color;
+    border-bottom: 1px solid @md-bd-color;
+    background: @md-bg-color;
     position: absolute;
     left: 0;
     top: 0;
@@ -190,7 +189,7 @@ export default {
         color: @btn-hover;
       }
       &:after {
-        content: "";
+        content: '';
         position: absolute;
         left: 100%;
         top: 50%;
@@ -236,7 +235,7 @@ export default {
     padding-top: 50px;
   }
   .render {
-    background-color: @md-title-color;
+    background-color: #fff;
     overflow-y: scroll;
     padding-top: 50px;
   }

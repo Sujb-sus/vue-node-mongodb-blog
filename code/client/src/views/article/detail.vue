@@ -42,6 +42,7 @@ export default {
   watch: {},
   created() { },
   mounted() {
+    document.documentElement.scrollTop = document.body.scrollTop = 0
     const clientHeight = document.documentElement.clientHeight;
     this.showSide = clientHeight > 840; // 840 = 665 + 170(label分类高度) + 之间间距
     window.addEventListener("scroll", this.handleScroll);
