@@ -24,10 +24,15 @@
           GitHub。如果觉得该博客对你学习有帮助的，请能给博主点个 Star。
           如果有不清楚的地方，欢迎邮箱来信交流。感谢各位国家栋梁的支持！！！🙏🙏🙏
           <br />
-          + Github地址：<a
+          + PC端Github地址：<a
             href="https://github.com/Sujb-sus/wallBlog"
             target="_blank"
             >https://github.com/Sujb-sus/wallBlog</a
+          ><br />
+          + H5端Github地址：<a
+            href="https://github.com/Sujb-sus/vue3-vite2-ts-blog-h5"
+            target="_blank"
+            >https://github.com/Sujb-sus/vue3-vite2-ts-blog-h5</a
           >
         </div>
       </div>
@@ -66,9 +71,9 @@ export default {
     return {};
   },
   watch: {},
-  created() {},
-  mounted() {},
-  beforeDestroy() {},
+  created() { },
+  mounted() { },
+  beforeDestroy() { },
   methods: {},
 };
 </script>
