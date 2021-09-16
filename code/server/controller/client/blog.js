@@ -40,6 +40,7 @@ module.exports = {
     let sortParams = {};
     if (sortBy) {
       sortParams[sortBy] = -1;
+    } else {
       sortParams['releaseTime'] = -1;
     }
 
