@@ -48,10 +48,13 @@ export default {
   },
   props: {},
   computed: {},
-  destroyed() {},
-  mounted() {},
+  destroyed() { },
+  mounted() { },
   methods: {
     handlerSubmit() {
+      if (!this.inputContent) {
+        return false;
+      }
       let params = {
         content: this.inputContent,
         nickname: this.nickname,
