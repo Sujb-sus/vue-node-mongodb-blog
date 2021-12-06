@@ -3,7 +3,8 @@
 一款简约版本的 PC 博客。前端项目主要是采用 Vue2 和 Element-UI 来搭建的；采用 Webpack5 来构建、打包。后端项目主要采用 Node 框架 Koa2 以及 MongoDB 数据库来设计的。
 
 1. 项目线上预览地址：[http://www.rasblog.com](http://www.rasblog.com)
-2. 移动端博客仓库地址：[https://github.com/Sujb-sus/vue3-vite2-ts-blog-h5](https://github.com/Sujb-sus/vue3-vite2-ts-blog-h5)
+2. Vue3 Vite2 H5 版本仓库地址：[https://github.com/Sujb-sus/vue3-vite2-ts-blog-h5](https://github.com/Sujb-sus/vue3-vite2-ts-blog-h5)
+3. React Hooks H5 版本仓库地址：[https://github.com/Sujb-sus/react-hooks-blog-h5](https://github.com/Sujb-sus/react-hooks-blog-h5)
 
 ## 主要功能
 
@@ -120,7 +121,7 @@ export default {
 };
 ```
 
-#### 四. less 全局变量导入
+#### 四. Less 全局变量导入
 
 1. 安装`style-resources-loader`插件
 
@@ -158,7 +159,7 @@ module.exports = {
 
 3. 这里有个缺点就是，修改了样式需要手动刷新页面，所以开发环境可以配合`vue-style-loader`使用，就可以重载样式模块
 
-#### 五. 支持 markdown 语法
+#### 五. 支持 Markdown 语法
 
 1. 安装`marked`和`highlightJs`插件
 
@@ -203,6 +204,15 @@ export default {
   },
 };
 ```
+
+#### 六. 介绍 Webpack5 的基础配置
+
+1. [Webpack5 常用的 Plugin ~](https://zhuanlan.zhihu.com/p/421179114)
+2. [Webpack5 常用的 Loader ~](https://zhuanlan.zhihu.com/p/421176554)
+
+#### 七. 项目部署线上流程
+
+1. [项目在 CentOS8.2 服务器上部署到宝塔 Linux 面板整体流程 ~](https://zhuanlan.zhihu.com/p/405941407)
 
 ## 注意事项：
 
