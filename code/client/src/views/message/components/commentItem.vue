@@ -6,7 +6,11 @@
       >条评论， <span>{{ replyCount }}</span
       >条回复
     </div>
-    <div class="comment-item" v-for="item in commentList" :key="item._id">
+    <div
+      class="comment-item"
+      v-for="(item, index) in commentList"
+      :key="item._id"
+    >
       <div class="comment-part">
         <div class="item-img">
           <Icon name="icon-user03" :style="{ color: item.headerColor }"></Icon>
@@ -37,7 +41,7 @@
           <comment-editor
             v-show="getReplyBox(item._id)"
             ref="editor"
-            @submit="handleReply"
+            @submit="(val) => handleReply(val, index)"
           ></comment-editor>
         </div>
       </div>
@@ -125,7 +129,7 @@ export default {
       this.byReplyUser = item.nickname;
       this.isReply = !this.isReply;
     },
-    handleReply(reply) {
+    handleReply(reply, index) {
       let params = {
         _id: this.currentId,
         replyTime: new Date().getTime() + "",
@@ -136,7 +140,8 @@ export default {
         replyHeaderColor: colorList[Math.floor(Math.random() * 7)],
       };
       return apiUpdateReplys(params)
-        .then((res) => {
+        .then(() => {
+          this.$refs.editor[index].handleReset();
           this.isReply = false;
           this.likeList = [];
           this.$emit("success");
