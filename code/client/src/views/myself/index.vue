@@ -16,23 +16,36 @@
         </div>
         <img class="main-img" src="../../images/wall.jpeg" />
         <div class="main-footer">
-          + 本博客是采用 Vue2.5 + Node15.14.0 + Mongodb4.2.0
-          前后端完全分离模式来搭建，具体的技术栈可在 GitHub 上了解。后续可能会用
-          Vue3.0 来重构一版，敬请期待！！！🌟🌟🌟
+          ◐ 本博客是采用 Vue2.5 + Node15.14.0 + Mongodb4.2.0
+          前后端完全分离模式来搭建。 💪 💪 💪
           <br />
-          + 本博客已开源，源码已上传到
-          GitHub。如果觉得该博客对你学习有帮助的，请能给博主点个 Star。
-          如果有不清楚的地方，欢迎邮箱来信交流。感谢各位国家栋梁的支持！！！🙏🙏🙏
+          ◒ 目前该博客有三个版本：当前线上的 Vue2.5 PC版本、Vue3.2
+          移动端版本、React17.0（Hooks）移动端版本。
+          后续应该会再写个小程序版本（技术选型未定，可留言建议），请敬请期待！！！🌟
+          🌟 🌟
           <br />
-          + PC端Github地址：<a
+          ◓ 三个版本皆已开源，源码已上传到 GitHub，具体的技术栈可在 GitHub
+          上了解。如果觉得该系列的博客对学习有帮助的，希望能给博主点个
+          Star，以资鼓励！在此感谢各位国家栋梁的支持！！！ 🙏 🙏 🙏
+          <br />
+          ◑
+          项目中如果有存在设计不合理的地方或有不清楚的地方，欢迎邮箱、微信来信交流。&nbsp;
+          🤩 🤩 🤩
+          <br />
+          1. Vue2 Node PC 版本仓库地址：<a
             href="https://github.com/Sujb-sus/wallBlog"
             target="_blank"
             >https://github.com/Sujb-sus/wallBlog</a
           ><br />
-          + H5端Github地址：<a
+          2. Vue3 Vite2 H5 版本仓库地址：<a
             href="https://github.com/Sujb-sus/vue3-vite2-ts-blog-h5"
             target="_blank"
             >https://github.com/Sujb-sus/vue3-vite2-ts-blog-h5</a
+          ><br />
+          3. React Hooks H5 版本仓库地址：<a
+            href="https://github.com/Sujb-sus/react-hooks-blog-h5"
+            target="_blank"
+            >https://github.com/Sujb-sus/react-hooks-blog-h5</a
           >
         </div>
       </div>
@@ -44,8 +57,8 @@
           <div class="side-content">
             <div class="content-item">网名：苏s哈 | wall</div>
             <div class="content-item">职业：Web前端工程师</div>
+            <div class="content-item">邮箱：sujb8540@163.com</div>
             <div class="content-item">个人微信：SJB854067626</div>
-            <div class="content-item">邮箱：854067626@qq.com</div>
           </div>
         </div>
         <div class="side-wrapper">

@@ -4,12 +4,13 @@
       <li
         :class="[
           'paging-item',
+          'paging-item--prev',
           'paging-item--defalut',
           { 'paging-item--disabled': index === 1 },
         ]"
         @click="prev"
       >
-        < Previous
+        < Prev
       </li>
       <li
         :class="[
@@ -19,7 +20,7 @@
         ]"
         @click="first"
       >
-        first
+        First
       </li>
 
       <li :class="['paging-item', 'paging-item--more']" v-if="showPrevMore">
@@ -27,10 +28,11 @@
       </li>
 
       <li
-        v-for="pager in pagers"
+        v-for="(pager, index) in pagers"
         :key="pager"
         :class="[
           'paging-item',
+          { 'paging-item--first': index === 0 },
           { 'paging-item--current': pageIndex === pager },
         ]"
         @click="go(pager)"
@@ -49,7 +51,7 @@
         ]"
         @click="last"
       >
-        last
+        Last
       </li>
       <li
         :class="[
@@ -186,23 +188,22 @@ export default {
     .paging-item {
       font-size: 14px;
       padding: 6px 16px;
-      margin-left: 4px;
+      margin-left: 10px;
       cursor: pointer;
-      color: #24292e;
-      border: none;
-      border-radius: 3px;
+      color: gray;
+      border: 1px solid gainsboro;
+      border-radius: 4px;
       box-sizing: border-box;
-      &:first-child {
-        margin-left: 0;
-      }
+      box-shadow: 3px 2px 2px gainsboro;
       &:hover {
         box-sizing: border-box;
         color: #fff !important;
-        background: @thinHighlightColor;
+        background: rgba(32, 178, 170, 0.7);
         border-color: transparent;
       }
       &.paging-item--defalut {
-        color: @thinHighlightColor;
+        color: rgba(32, 178, 170, 0.7);
+        margin-left: 10px;
       }
       &.paging-item--disabled,
       &.paging-item--more {
@@ -211,13 +212,20 @@ export default {
       }
       //选中
       &.paging-item--current {
-        background: @thinHighlightColor;
+        background: rgba(32, 178, 170, 0.7);
+        box-shadow: 3px 4px 2px gainsboro;
         color: #fff;
         border-color: transparent;
         position: relative;
         z-index: 1;
         border: none;
       }
+      // &.paging-item--first {
+      //   margin-left: 10px !important;
+      // }
+      // &.paging-item--prev {
+      //   margin-left: 0 !important;
+      // }
     }
   }
 }
