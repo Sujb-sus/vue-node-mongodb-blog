@@ -18,7 +18,7 @@
         <div class="item-box">
           <div class="box-title">
             {{ item.nickname }}
-            <span>{{ item.createTime | formatTime("yyyy-MM-dd hh:mm") }}</span>
+            <span>{{ item.createTime | formatTime('yyyy-MM-dd hh:mm') }}</span>
           </div>
           <div class="box-content" v-html="item.content"></div>
           <div class="item-icon">
@@ -34,7 +34,7 @@
             </div>
             <div class="box-icon" @click="handleCilckReply(item)">
               <Icon name="icon-reply02"></Icon>
-              <span>{{ getReplyBox(item._id) ? "取消" : "回复" }}</span>
+              <span>{{ getReplyBox(item._id) ? '取消' : '回复' }}</span>
             </div>
           </div>
 
@@ -97,32 +97,28 @@ export default {
     return {
       currentId: "", // 当前id
       byReplyUser: "", // 当前被回复用户
-      isLike: false, // 是否点赞
       isReply: false, // 是否回复
       likeList: [],
     };
   },
   watch: {},
-  created() {},
-  mounted() {},
-  beforeDestroy() {},
+  created() { },
+  mounted() { },
+  beforeDestroy() { },
   methods: {
     // 点赞
     handleLikes(id) {
-      if (this.likeList.includes(id)) {
-        this.isLike = true;
-        this.likeList.splice(this.likeList.indexOf(id), 1);
-      } else {
-        this.isLike = false;
-        this.likeList.push(id);
-      }
       this.currentId = id;
-      return apiUpdateLikes({ _id: id, isLike: this.isLike })
-        .then((res) => {})
+      return apiUpdateLikes({ _id: id, isLike: this.likeList.includes(id) })
+        .then(() => {
+          this.likeList.includes(id)
+            ? this.likeList.splice(this.likeList.indexOf(id), 1)
+            : this.likeList.push(id);
+        })
         .catch((err) => {
           console.log(err);
         })
-        .finally(() => {});
+        .finally(() => { });
     },
     handleCilckReply(item) {
       this.currentId = item._id;
@@ -149,7 +145,7 @@ export default {
         .catch((err) => {
           console.log(err);
         })
-        .finally(() => {});
+        .finally(() => { });
     },
   },
 };
@@ -157,11 +153,12 @@ export default {
 
 <style lang="less" scoped>
 .comment-main {
-  padding: 20px;
-  width: 70%;
+  padding: 0 32px;
+  width: 80%;
   margin: 0 auto;
-  // border: 1px solid @borderColor;
-  // border-radius: 6px;
+  box-shadow: 6px 6px 8px @shadowColor;
+  border: 1px solid @shadowColor;
+  border-radius: 24px;
   .side-title {
     font-size: 14px;
     margin-bottom: 30px;
@@ -187,7 +184,7 @@ export default {
     position: relative;
     padding-bottom: 10px;
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       bottom: 0;
       left: 0;
@@ -201,7 +198,7 @@ export default {
       padding: 20px 0 10px;
 
       .item-img {
-        padding-right: 24px;
+        padding-right: 16px;
         svg {
           font-size: 32px;
         }
@@ -222,13 +219,15 @@ export default {
             font-size: 12px;
             color: @borderBoldColor;
             font-weight: 500;
+            box-shadow: 0 1px 2px @shadowColor;
+            padding: 2px 4px;
           }
         }
         .box-content {
           font-size: 14px;
-          color: @thinColor;
+          color: @assistColor;
           line-height: 24px;
-          margin-top: 10px;
+          margin-top: 6px;
         }
         .item-icon {
           display: flex;

@@ -81,7 +81,7 @@ export default {
 <style scoped lang="less">
 .comment-editor {
   width: 100%;
-  padding: 24px 20px;
+  padding: 24px 48px;
   .input-wrapper {
     &.inline {
       display: flex;
@@ -92,7 +92,7 @@ export default {
     }
   }
   .footer-action {
-    margin-top: 10px;
+    margin-top: 16px;
     display: flex;
     align-items: center;
     input {
@@ -104,6 +104,7 @@ export default {
       border-radius: 20px;
       padding-left: 12px;
       outline: none;
+      box-shadow: 4px 3px 3px @shadowColor;
       &::placeholder {
         color: @borderBoldColor;
       }

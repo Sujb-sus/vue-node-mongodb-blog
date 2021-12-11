@@ -72,6 +72,7 @@ export default {
   border-radius: 4px;
   display: flex;
   align-items: center;
+  box-shadow: 6px 6px 8px @shadowColor;
   input {
     padding: 0 6px;
     border: 1px solid @borderColor;

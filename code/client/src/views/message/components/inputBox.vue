@@ -29,7 +29,7 @@ export default {
       });
     },
   },
-  mounted() {},
+  mounted() { },
   methods: {
     focus() {
       this.$refs.richText.focus();
@@ -61,8 +61,8 @@ export default {
     content: attr(placeholder);
     color: @borderBoldColor;
     position: absolute;
-    left: 10px;
-    top: 7px;
+    left: 12px;
+    top: 8px;
   }
   &.focused {
     border: #66b1ff 1px solid;
@@ -71,8 +71,9 @@ export default {
   &:focus {
     outline: none;
   }
-  border: 1px solid @borderBoldColor;
-  border-radius: 3px;
+  border: 1px solid @shadowColor;
+  box-shadow: 4px 3px 3px @shadowColor;
+  border-radius: 12px;
   padding: 7px 10px;
   padding-right: 30px;
   position: relative;

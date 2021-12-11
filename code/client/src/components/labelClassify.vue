@@ -44,6 +44,7 @@ export default {
   background-color: #fff;
   margin-top: 20px;
   border-radius: 4px;
+  box-shadow: 6px 6px 8px @shadowColor;
   .label-content {
     display: flex;
     align-items: center;
@@ -56,10 +57,12 @@ export default {
       align-items: center;
       padding: 12px;
       color: #fff;
-      margin: 4px;
+      margin: 5px;
       border-radius: 12px;
       transition: 1s ease all;
       position: relative;
+      box-shadow: 4px 4px 8px gainsboro;
+
       &:hover {
         border-radius: 0;
         cursor: pointer;

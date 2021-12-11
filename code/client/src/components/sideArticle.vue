@@ -30,7 +30,7 @@
               <div class="func-box">
                 <Icon name="icon-date02"></Icon>
                 <div class="box-text">
-                  {{ item.releaseTime | formatTime("yyyy-MM-dd") }}
+                  {{ item.releaseTime | formatTime('yyyy-MM-dd') }}
                 </div>
               </div>
               <div class="func-box">
@@ -119,6 +119,7 @@ export default {
   background-color: #fff;
   margin-top: 20px;
   border-radius: 6px;
+  box-shadow: 6px 6px 8px @shadowColor;
   .side-list {
     padding: 10px;
     .list-item {

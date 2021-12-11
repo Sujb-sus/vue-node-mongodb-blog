@@ -14,7 +14,7 @@
         <div v-html="replyContent" class="reply-content"></div>
       </div>
       <div class="reply-date">
-        {{ replyTime | formatTime("yyyy-MM-dd hh:mm:ss") }}
+        <span>{{ replyTime | formatTime('yyyy-MM-dd hh:mm') }}</span>
       </div>
     </div>
   </div>
@@ -51,9 +51,9 @@ export default {
     return {};
   },
   watch: {},
-  created() {},
-  mounted() {},
-  beforeDestroy() {},
+  created() { },
+  mounted() { },
+  beforeDestroy() { },
   methods: {},
 };
 </script>
@@ -61,6 +61,7 @@ export default {
 <style lang="less" scoped>
 .reply-item {
   background-color: @thinBgColor;
+  box-shadow: 3px 2px 2px @shadowColor;
   padding: 10px 20px;
   margin-left: 42px;
   margin-bottom: 10px;
@@ -88,14 +89,21 @@ export default {
         flex: 1;
         font-size: 14px;
         line-height: 24px;
-        color: @thinColor;
+        color: @assistColor;
       }
     }
     .reply-date {
-      font-size: 12px;
-      color: @borderBoldColor;
-      margin-top: 2px;
-      text-align: right;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      span {
+        display: inline-block;
+        font-size: 12px;
+        color: @borderBoldColor;
+        margin-top: 2px;
+        box-shadow: 0px 1px 2px #ccc;
+        padding: 2px 4px;
+      }
     }
   }
 }

@@ -4,7 +4,6 @@
       <li
         :class="[
           'paging-item',
-          'paging-item--prev',
           'paging-item--defalut',
           { 'paging-item--disabled': index === 1 },
         ]"
@@ -28,11 +27,10 @@
       </li>
 
       <li
-        v-for="(pager, index) in pagers"
+        v-for="pager in pagers"
         :key="pager"
         :class="[
           'paging-item',
-          { 'paging-item--first': index === 0 },
           { 'paging-item--current': pageIndex === pager },
         ]"
         @click="go(pager)"
@@ -191,10 +189,9 @@ export default {
       margin-left: 10px;
       cursor: pointer;
       color: gray;
-      border: 1px solid gainsboro;
       border-radius: 4px;
       box-sizing: border-box;
-      box-shadow: 3px 2px 2px gainsboro;
+      box-shadow: 0 0 10px @shadowColor;
       &:hover {
         box-sizing: border-box;
         color: #fff !important;
@@ -210,22 +207,14 @@ export default {
         color: #959da5;
         pointer-events: none;
       }
-      //选中
       &.paging-item--current {
         background: rgba(32, 178, 170, 0.7);
-        box-shadow: 3px 4px 2px gainsboro;
         color: #fff;
         border-color: transparent;
         position: relative;
         z-index: 1;
         border: none;
       }
-      // &.paging-item--first {
-      //   margin-left: 10px !important;
-      // }
-      // &.paging-item--prev {
-      //   margin-left: 0 !important;
-      // }
     }
   }
 }

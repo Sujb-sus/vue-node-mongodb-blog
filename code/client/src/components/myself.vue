@@ -37,6 +37,7 @@ export default {
   background-color: #fff;
   margin-top: 20px;
   border-radius: 4px;
+  box-shadow: 6px 6px 8px @shadowColor;
   .header-bg {
     height: 150px;
     border-radius: 4px;

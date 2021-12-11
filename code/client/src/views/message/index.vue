@@ -10,6 +10,7 @@
       <comment-item
         v-if="total > 0"
         :commentList="commentList"
+        ref="commentRef"
         :total="total"
         :replyCount="replyCount"
         @success="initData"
@@ -54,8 +55,10 @@ export default {
   },
   methods: {
     pageChange(page) {
-      this.pageindex = page;
       document.documentElement.scrollTop = document.body.scrollTop = 0;
+      // 清空已点赞列表
+      this.$refs.commentRef.likeList = [];
+      this.pageindex = page;
       this.getMessageList();
     },
     initData() {
@@ -70,8 +73,9 @@ export default {
     },
     handleComment(params) {
       return apiAddMessage(params)
-        .then((res) => {
+        .then(() => {
           this.$refs.editor.handleReset();
+          this.$refs.commentRef.likeList = [];
           this.getMessageList();
         })
         .catch((err) => {

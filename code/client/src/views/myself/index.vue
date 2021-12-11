@@ -121,6 +121,8 @@ export default {
     margin-top: 10px;
     max-height: 300px;
     object-fit: contain;
+    box-shadow: 12px 12px 12px @shadowColor;
+    border-radius: 12px;
   }
   .main-footer {
     background: @thinBgColor;
@@ -129,6 +131,8 @@ export default {
     line-height: 32px;
     margin: 20px auto;
     color: #0609308a;
+    box-shadow: 6px 6px 12px @shadowColor;
+    border-radius: 12px;
     a {
       color: #0609308a;
       text-decoration: underline;
@@ -163,23 +167,27 @@ export default {
         width: 100px;
         height: 100px;
         border-radius: 50%;
+        padding: 4px;
+        box-shadow: 0px 4px 32px @shadowColor;
       }
       .qrcode {
         width: 80%;
         height: 80%;
-        border-radius: 6px;
+        border-radius: 12px;
         margin-top: 24px;
+        box-shadow: 0px 6px 12px @shadowColor;
       }
     }
     .side-content {
       .content-item {
         width: 92%;
         padding: 5px 10px;
-        margin: 5px 0;
+        margin: 8px 0;
         border-radius: 5px;
         font-size: 14px;
         color: @thinColor;
         background-color: @thinBgColor;
+        box-shadow: 4px 4px 5px @shadowColor;
       }
     }
   }

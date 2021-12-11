@@ -99,6 +99,8 @@ export default {
   watch: {
     $route: {
       handler(to, from) {
+        // 清空已点赞列表
+        this.likeList = [];
         this.isQuery = to.query.search;
         this.keyword = to.params.keyword;
         this.keyword = this.keyword === "all" ? "" : this.keyword;
@@ -125,8 +127,10 @@ export default {
       });
     },
     pageChange(page) {
-      this.pageindex = page;
       document.documentElement.scrollTop = document.body.scrollTop = 0;
+      // 清空已点赞列表
+      this.likeList = [];
+      this.pageindex = page;
       this.getBlogList();
     },
     getBlogList() {
@@ -168,7 +172,7 @@ export default {
     font-size: 18px;
     position: relative;
     &::after {
-      content: " ";
+      content: ' ';
       position: absolute;
       height: 2px;
       width: 4%;
