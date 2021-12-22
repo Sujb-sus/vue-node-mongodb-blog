@@ -8,9 +8,6 @@
           :sideClassify="RECOMMEND_STATUS"
           :class="{ 'side-sticky': showSide && showSticky }"
         ></side-article>
-        <label-classify
-          :class="[showSide && showSticky ? 'label-sticky' : 'side-sticky']"
-        ></label-classify>
       </div>
     </div>
   </div>
@@ -44,7 +41,7 @@ export default {
   mounted() {
     document.documentElement.scrollTop = document.body.scrollTop = 0
     const clientHeight = document.documentElement.clientHeight;
-    this.showSide = clientHeight > 840; // 840 = 665 + 170(label分类高度) + 之间间距
+    this.showSide = clientHeight > 665; // 665是一个side-article组件的高度
     window.addEventListener("scroll", this.handleScroll);
   },
   beforeDestroy() {
@@ -54,7 +51,7 @@ export default {
     handleScroll() {
       this.scrollTop =
         document.documentElement.scrollTop || document.body.scrollTop;
-      this.showSticky = this.scrollTop > 665; // 665是一个side-article组件的高度
+      this.showSticky = this.scrollTop > 665;
     },
   },
 };
@@ -64,9 +61,5 @@ export default {
 .side-sticky {
   position: sticky;
   top: 0;
-}
-.label-sticky {
-  position: sticky;
-  top: 665px;
 }
 </style>

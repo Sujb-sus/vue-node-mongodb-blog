@@ -41,6 +41,7 @@ module.exports = {
     if (sortBy) {
       sortParams[sortBy] = -1;
     } else {
+      sortParams['level'] = -1;
       sortParams['releaseTime'] = -1;
     }
 
