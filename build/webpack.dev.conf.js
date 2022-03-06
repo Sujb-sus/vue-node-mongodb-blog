@@ -42,6 +42,11 @@ const dev = merge(baseConf, {
         warnings: false,
       },
     },
+    // 忽略public下文件的监听
+    static: {
+      directory: path.join(__dirname, 'public'),
+      watch: false,
+    },
   },
   watchOptions: {
     ignored: ["**/.#*.vue", "node_modules/**"],
