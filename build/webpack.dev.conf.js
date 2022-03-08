@@ -1,5 +1,6 @@
 "use strict";
 const webpack = require("webpack");
+const path = require("path");
 // 合并配置
 const { merge } = require("webpack-merge");
 // 配置需打包的html入口信息,并创建一个新的html文件
