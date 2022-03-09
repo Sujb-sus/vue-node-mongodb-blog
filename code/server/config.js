@@ -2,7 +2,7 @@ import path from 'path';
 const auth = {
   admin_secret: 'admin-token',
   tokenKey: 'Token-Auth',
-  whiteList: ['login', 'client_api'],
+  whiteList: ['login', 'client_api', '/images/'],
   blackList: ['admin_api'],
 };
 
