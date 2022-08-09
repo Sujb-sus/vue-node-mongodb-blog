@@ -2,9 +2,8 @@
 
 一款简约版本的 PC 博客。前端项目主要是采用 Vue2 和 Element-UI 来搭建的；采用 Webpack5 来构建、打包。后端项目主要采用 Node 框架 Koa2 以及 MongoDB 数据库来设计的。
 
-1. 项目线上预览地址：[http://www.rasblog.com](http://www.rasblog.com)
-2. Vue3 Vite2 H5 版本仓库地址：[https://github.com/Sujb-sus/vue3-vite2-ts-blog-h5](https://github.com/Sujb-sus/vue3-vite2-ts-blog-h5)
-3. React Hooks H5 版本仓库地址：[https://github.com/Sujb-sus/react-hooks-blog-h5](https://github.com/Sujb-sus/react-hooks-blog-h5)
+1. Vue3 Vite2 H5 版本仓库地址：[https://github.com/Sujb-sus/vue3-vite2-ts-blog-h5](https://github.com/Sujb-sus/vue3-vite2-ts-blog-h5)
+2. React Hooks H5 版本仓库地址：[https://github.com/Sujb-sus/react-hooks-blog-h5](https://github.com/Sujb-sus/react-hooks-blog-h5)
 
 ## 主要功能
 
